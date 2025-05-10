@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs'); // ✅ For password hashing
+const bcrypt = require('bcryptjs');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
@@ -13,6 +13,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// MongoDB connection with error handling
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -140,6 +141,8 @@ app.post('/login', async (req, res) => {
         res.status(500).json({ message: 'Internal server error', error: error.message || error });
     }
 });
+
+// Check Eligibility Route
 app.post('/check-eligibility', async (req, res) => {
     const { mobileNumber, password } = req.body;
 
@@ -161,7 +164,6 @@ app.post('/check-eligibility', async (req, res) => {
 
         // Calculate the age from the DOB
         const age = calculateAge(dob);
-        
 
         // Filter schemes based on eligibility
         const eligibleSchemes = yojanaData.filter(scheme => {
@@ -169,7 +171,7 @@ app.post('/check-eligibility', async (req, res) => {
             // Check if user meets the criteria for the scheme
             const isEligible =
                 (age >= eligibilityModel.age && age <= eligibilityModel.maxAge) &&
-                income <= eligibilityModel.income &&
+                income >= eligibilityModel.income &&
                 caste === eligibilityModel.caste &&
                 gender.trim().toLowerCase() === eligibilityModel.Gender.trim().toLowerCase();
                 
@@ -209,6 +211,7 @@ app.get('/', (req, res) => {
     res.send('Hello from Backend!');
 });
 
+// Ensure the app listens on the correct port
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
