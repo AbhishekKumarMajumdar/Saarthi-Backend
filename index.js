@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
-
+const yojanaDatas = require('./data/yojanaData.json');
 require('dotenv').config();
 
 const User = require('./models/User');
@@ -130,6 +130,16 @@ app.get('/user/schemes/:mobileNumber', async (req, res) => {
   } catch (error) {
     console.error("Error fetching scheme eligibility:", error);
     res.status(500).json({ message: 'Internal server error', error: error.message });
+  }
+});
+
+// Route to return full Yojana Data
+app.get('/all-yojana-data', (req, res) => {
+  try {
+    res.status(200).json({ message: 'All Yojana Data', data: yojanaDatas });
+  } catch (error) {
+    console.error("Error reading Yojana data:", error);
+    res.status(500).json({ message: 'Error fetching yojana data', error: error.message });
   }
 });
 
