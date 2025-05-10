@@ -140,6 +140,69 @@ app.post('/login', async (req, res) => {
         res.status(500).json({ message: 'Internal server error', error: error.message || error });
     }
 });
+app.post('/check-eligibility', async (req, res) => {
+    const { mobileNumber, password } = req.body;
+
+    try {
+        // Find user by mobile number
+        const userData = await User.findOne({ mobileNumber });
+        if (!userData) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        // Compare the password
+        const isPasswordValid = await bcrypt.compare(password, userData.password);
+        if (!isPasswordValid) {
+            return res.status(401).json({ message: 'Invalid password' });
+        }
+
+        // Get the user details
+        const { dob, income, caste, gender } = userData;
+
+        // Calculate the age from the DOB
+        const age = calculateAge(dob);
+        
+
+        // Filter schemes based on eligibility
+        const eligibleSchemes = yojanaData.filter(scheme => {
+            const eligibilityModel = scheme.EligibilityModel;
+            // Check if user meets the criteria for the scheme
+            const isEligible =
+                (age >= eligibilityModel.age && age <= eligibilityModel.maxAge) &&
+                income <= eligibilityModel.income &&
+                caste === eligibilityModel.caste &&
+                gender.trim().toLowerCase() === eligibilityModel.Gender.trim().toLowerCase();
+                
+            return isEligible;
+        });
+
+        // Return the eligible schemes
+        if (eligibleSchemes.length > 0) {
+            res.status(200).json({ message: 'Eligible schemes found', eligibleSchemes });
+        } else {
+            res.status(200).json({ message: 'No eligible schemes found' });
+        }
+
+    } catch (error) {
+        console.error("Error checking eligibility:", error);
+        res.status(500).json({ message: 'Internal server error', error: error.message });
+    }
+});
+
+// Function to calculate age from the given DOB
+function calculateAge(dob) {
+    const today = new Date();
+    const birthDate = new Date(dob);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const month = today.getMonth();
+    
+    // Adjust age if the birthday hasn't occurred yet this year
+    if (month < birthDate.getMonth() || (month === birthDate.getMonth() && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    
+    return age;
+}
 
 // ✅ Default route
 app.get('/', (req, res) => {
