@@ -49,15 +49,24 @@ app.post('/register', async (req, res) => {
 
         // Check eligible schemes
         const eligibleSchemes = yojanaData.filter(scheme => {
-            const e = scheme.EligibilityModel;
-            return (
-                age >= e.age &&
-                age <= e.maxAge &&
-                rest.income <= e.income &&
-                rest.caste === e.caste &&
-                rest.gender.trim().toLowerCase() === e.Gender.trim().toLowerCase()
-            );
-        });
+  const e = scheme.EligibilityModel;
+
+  const isCasteMatch =
+    e.caste.trim().toLowerCase() === "any" ||
+    rest.caste.trim().toLowerCase() === e.caste.trim().toLowerCase();
+
+  const isGenderMatch =
+    e.Gender.trim().toLowerCase() === "any" ||
+    rest.gender.trim().toLowerCase() === e.Gender.trim().toLowerCase();
+
+  return (
+    age >= e.age &&
+    age <= e.maxAge &&
+    rest.income <= e.income &&
+    isCasteMatch &&
+    isGenderMatch
+  );
+});
 
         const newUser = new User({
             ...rest,
@@ -151,30 +160,38 @@ async function checkEligibility(userData) {
   // Calculate age from DOB
   const age = calculateAge(dob);
 
-  // Filter eligible schemes based on the user's data
-  const eligibleSchemes = yojanaData.filter(scheme => {
+  const eligibleSchemes = yojanaData.filter((scheme) => {
     const eligibilityModel = scheme.EligibilityModel;
 
-    // Debugging log to verify scheme eligibility criteria
-    console.log("Checking eligibility for scheme:", scheme.title);
+    console.log("Checking eligibility for scheme:", scheme.title || scheme.locales?.en?.title);
     console.log("User Age:", age, "Scheme Age Range:", eligibilityModel.age, eligibilityModel.maxAge);
     console.log("User Income:", income, "Scheme Income Limit:", eligibilityModel.income);
     console.log("User Caste:", caste, "Scheme Caste:", eligibilityModel.caste);
     console.log("User Gender:", gender, "Scheme Gender:", eligibilityModel.Gender);
 
-    // Check eligibility for age, income, caste, and gender
-    const isEligible =
-      (age >= eligibilityModel.age && age <= eligibilityModel.maxAge) &&
-      income <= eligibilityModel.income &&
-      caste === eligibilityModel.caste &&
+    // Normalize and check gender and caste, supporting "Any"
+    const isGenderMatch =
+      eligibilityModel.Gender.trim().toLowerCase() === "any" ||
       gender.trim().toLowerCase() === eligibilityModel.Gender.trim().toLowerCase();
+
+    const isCasteMatch =
+      eligibilityModel.caste.trim().toLowerCase() === "any" ||
+      caste.trim().toLowerCase() === eligibilityModel.caste.trim().toLowerCase();
+
+    const isEligible =
+      age >= eligibilityModel.age &&
+      age <= eligibilityModel.maxAge &&
+      income <= eligibilityModel.income &&
+      isCasteMatch &&
+      isGenderMatch;
 
     return isEligible;
   });
 
-  // Return eligible schemes or an empty array if no eligible schemes found
   return eligibleSchemes;
 }
+
+
 
 // Function to calculate age from the given DOB
 function calculateAge(dob) {
