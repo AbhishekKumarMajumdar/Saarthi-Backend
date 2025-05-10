@@ -171,7 +171,7 @@ app.post('/check-eligibility', async (req, res) => {
             // Check if user meets the criteria for the scheme
             const isEligible =
                 (age >= eligibilityModel.age && age <= eligibilityModel.maxAge) &&
-                income >= eligibilityModel.income &&
+                income <= eligibilityModel.income &&
                 caste === eligibilityModel.caste &&
                 gender.trim().toLowerCase() === eligibilityModel.Gender.trim().toLowerCase();
                 
