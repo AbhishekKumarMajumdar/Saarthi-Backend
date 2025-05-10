@@ -167,7 +167,14 @@
       }
     },
     "image": "https://panchayatitimes.com/wp-content/uploads/2025/01/pm-aavash-yojna-1614226743.jpg",
-    "form": "https://pmaymis.gov.in/"
+    "form": "https://pmaymis.gov.in/",
+    "EligibilityModel":{
+       "age" : 25,
+      "maxAge" : 50,
+      "income" : 100000,
+      "caste" : "SC",
+      "Gender" : "Male"
+    }
   },
   {
     "id": 2,
