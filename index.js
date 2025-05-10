@@ -136,7 +136,7 @@ app.get('/user/schemes/:mobileNumber', async (req, res) => {
 // Route to return full Yojana Data
 app.get('/all-yojana-data', (req, res) => {
   try {
-    res.status(200).json({ message: 'All Yojana Data', data: yojanaDatas });
+    res.status(200).json(yojanaDatas);
   } catch (error) {
     console.error("Error reading Yojana data:", error);
     res.status(500).json({ message: 'Error fetching yojana data', error: error.message });
