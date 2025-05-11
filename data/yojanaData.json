@@ -15,7 +15,7 @@
           "Family income must fall under EWS, LIG, or MIG category as per government norms.",
           "Applicant must be a citizen of India."
         ],
-        "audioSrc": "Tera.mp3"
+        "audioSrc": "PMAY-en.mp3"
       },
       "hi": {
         "title": "प्रधानमंत्री आवास योजना",
@@ -31,7 +31,7 @@
           "परिवार की आय EWS, LIG या MIG श्रेणी में होनी चाहिए।",
           "आवेदक भारतीय नागरिक होना चाहिए।"
         ],
-        "audioSrc": "sample.mp3"
+        "audioSrc": "PMAY-hi.mp3"
       },
       "bn": {
         "title": "প্রধানমন্ত্রী আবাস যোজনা",
@@ -46,7 +46,7 @@
           "পরিবারের আয় EWS, LIG বা MIG বিভাগের মধ্যে পড়তে হবে।",
           "আবেদনকারী ভারতীয় নাগরিক হতে হবে।"
         ],
-        "audioSrc": "sample.mp3"
+        "audioSrc": "PMAY-bn.mp3"
       },
       "mr": {
         "title": "प्रधानमंत्री आवास योजना",
@@ -61,7 +61,7 @@
           "कुटुंबाचे उत्पन्न EWS, LIG किंवा MIG श्रेणीत असावे.",
           "अर्जदार भारतीय नागरिक असावा."
         ],
-        "audioSrc": "sample.mp3"
+        "audioSrc": "PMAY-mr.mp3"
       },
       "te": {
         "title": "ప్రధానమంత్రి అవాస్ యోజన",
@@ -76,7 +76,7 @@
           "కుటుంబ ఆదాయం EWS, LIG లేదా MIG వర్గంలో ఉండాలి.",
           "దరఖాస్తుదారు భారతీయ పౌరుడు కావాలి."
         ],
-        "audioSrc": "sample.mp3"
+        "audioSrc": "PMAY-te.mp3"
       },
       "ta": {
         "title": "பிரதமர் வீட்டு திட்டம்",
@@ -91,7 +91,7 @@
           "குடும்ப வருமானம் EWS, LIG அல்லது MIG வகையில் இருக்க வேண்டும்.",
           "விண்ணப்பதாரர் இந்திய குடிமகனாக இருக்க வேண்டும்."
         ],
-        "audioSrc": "sample.mp3"
+        "audioSrc": "PMAY-ta.mp3"
       },
       "gu": {
         "title": "પ્રધાનમંત્રી આવાસ યોજના",
@@ -106,7 +106,7 @@
           "પરિવારની આવક EWS, LIG અથવા MIG શ્રેણી હેઠળ હોવી જોઈએ.",
           "અરજદાર ભારતીય નાગરિક હોવો જોઈએ."
         ],
-        "audioSrc": "sample.mp3"
+        "audioSrc": "PMAY-gu.mp3"
       },
       "ur": {
         "title": "پرائم منسٹر آواس یوجنا",
@@ -121,7 +121,7 @@
           "خاندان کی آمدنی EWS، LIG یا MIG کیٹگری میں ہونی چاہیے۔",
           "درخواست دہندہ بھارتی شہری ہونا چاہیے۔"
         ],
-        "audioSrc": "sample.mp3"
+        "audioSrc": "PMAY-ur.mp3"
       },
       "kn": {
         "title": "ಪ್ರಧಾನಮಂತ್ರಿ ಆವಾಸ ಯೋಜನೆ",
@@ -136,7 +136,7 @@
           "ಕುಟುಂಬದ ಆದಾಯ EWS, LIG ಅಥವಾ MIG ವರ್ಗದಲ್ಲಿ ಇರಬೇಕು.",
           "ಅರ್ಜಿದಾರನು ಭಾರತೀಯ ನಾಗರಿಕರಾಗಿರಬೇಕು."
         ],
-        "audioSrc": "sample.mp3"
+        "audioSrc": "PMAY-kn.mp3"
       },
       "or": {
         "title": "ପ୍ରଧାନମନ୍ତ୍ରୀ ଆବାସ ଯୋଜନା",
@@ -148,7 +148,7 @@
           "ପରିବାର ଆୟ EWS, LIG ବା MIG ଶ୍ରେଣୀ ମଧ୍ୟରେ ହେବା ଉଚିତ।",
           "ଅନୁବେଶକ ଜଣେ ଭାରତୀୟ ନାଗରିକ ହେବା ଉଚିତ।"
         ],
-        "audioSrc": "sample.mp3"
+        "audioSrc": "PMAY-or.mp3"
       },
       "ml": {
         "title": "പ്രധാനമന്ത്രിയുടെ ആവാസ് യോജന",
@@ -163,7 +163,7 @@
           "കുടുംബവരുമാനം EWS, LIG, MIG വിഭാഗത്തിൽ പെടണം.",
           "അപേക്ഷദാർ ഒരു ഇന്ത്യൻ പൗരനായിരിക്കണം."
         ],
-        "audioSrc": "sample.mp3"
+        "audioSrc": "PMAY-ml.mp3"
       }
     },
     "image": "https://panchayatitimes.com/wp-content/uploads/2025/01/pm-aavash-yojna-1614226743.jpg",
