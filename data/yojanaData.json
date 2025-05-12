@@ -191,7 +191,7 @@
         "Should not be a defaulter in any financial institution.",
         "Preference given to women from SC/ST/OBC/minority communities."
       ],
-      "audioSrc": "WES-en.mp3"
+      "audioSrc": "WES-En.mp3"
     },
     "hi": {
       "title": "महिला उद्यमिता योजना",
@@ -527,7 +527,7 @@
         "Must not be covered under any other government-funded health insurance scheme.",
         "Valid ration card or identity proof required at time of treatment."
       ],
-      "audioSrc": "ayushman-bharat-yojana-en.mp3"
+      "audioSrc": "ABPMJAY-en.mp3"
     },
     "hi": {
       "title": "आयुष्मान भारत योजना",
@@ -541,7 +541,7 @@
         "कोई अन्य सरकारी स्वास्थ्य बीमा योजना के अंतर्गत नहीं आना चाहिए।",
         "इलाज के समय वैध राशन कार्ड या पहचान पत्र आवश्यक।"
       ],
-      "audioSrc": "ayushman-bharat-yojana-hi.mp3"
+      "audioSrc": "ABPMJAY-hi.mp3"
     },
     "bn": {
       "title": "আয়ুষ্মান ভারত যোজনা",
@@ -555,7 +555,7 @@
         "অন্য কোনও সরকারি স্বাস্থ্য বিমা প্রকল্পে অন্তর্ভুক্ত থাকা চলবে না।",
         "চিকিৎসার সময় বৈধ রেশন কার্ড বা পরিচয়পত্র আবশ্যক।"
       ],
-      "audioSrc": "ayushman-bharat-yojana-bn.mp3"
+      "audioSrc": "ABPMJAY-bn.mp3"
     },
     "mr": {
       "title": "आयुष्मान भारत योजना",
@@ -569,7 +569,7 @@
         "इतर कोणत्याही सरकारी आरोग्य विमा योजनेत समाविष्ट नसावे.",
         "उपचाराच्या वेळी वैध ओळखपत्र किंवा रेशन कार्ड आवश्यक आहे."
       ],
-      "audioSrc": "ayushman-bharat-yojana-mr.mp3"
+      "audioSrc": "ABPMJAY-mr.mp3"
     },
     "te": {
       "title": "ఆయుష్మాన్ భారత్ యోజన",
@@ -583,7 +583,7 @@
         "ఇతర ప్రభుత్వ ఆరోగ్య బీమా పథకాలలో సభ్యులుగా ఉండరాదు.",
         "చికిత్స సమయంలో చెల్లుబాటు అయ్యే రేషన్ కార్డు లేదా గుర్తింపు అవసరం."
       ],
-      "audioSrc": "ayushman-bharat-yojana-te.mp3"
+      "audioSrc": "ABPMJAY-te.mp3"
     },
     "ta": {
       "title": "ஆயுஷ்மான் பாரத் திட்டம்",
@@ -597,7 +597,7 @@
         "மற்ற எந்த அரசு சுகாதார திட்டத்திற்கும் உட்பட்டிருக்கக்கூடாது.",
         "சிகிச்சைக்கு செல்லும் போது அடையாள அட்டை அவசியம்."
       ],
-      "audioSrc": "ayushman-bharat-yojana-ta.mp3"
+      "audioSrc": "ABPMJAY-ta.mp3"
     },
     "gu": {
       "title": "આયુષ્માન ભારત યોજના",
@@ -611,7 +611,7 @@
         "અન્ય સરકાર આરોગ્ય યોજનાઓ હેઠળ આવતો ન હોવો જોઈએ.",
         "ઉપચાર સમયે માન્ય રેશનકાર્ડ અથવા ઓળખદસ્તાવેજ જરૂરી છે."
       ],
-      "audioSrc": "ayushman-bharat-yojana-gu.mp3"
+      "audioSrc": "ABPMJAY-gu.mp3"
     },
     "ur": {
       "title": "آیوشمان بھارت یوجنا",
@@ -625,7 +625,7 @@
         "کسی اور سرکاری بیمہ اسکیم کے تحت نہ ہوں۔",
         "علاج کے وقت درست شناختی کارڈ یا راشن کارڈ درکار ہوگا۔"
       ],
-      "audioSrc": "ayushman-bharat-yojana-ur.mp3"
+      "audioSrc": "ABPMJAY-ur.mp3"
     },
     "kn": {
       "title": "ಆಯುಷ್ಮಾನ್ ಭಾರತ ಯೋಜನೆ",
@@ -639,7 +639,7 @@
         "ಇತರೆ ಆರೋಗ್ಯ ವಿಮಾ ಯೋಜನೆಗಳಿಗೆ ಒಳಪಡಬಾರದು.",
         "ಚಿಕಿತ್ಸೆಗೆ ಸಮಯದಲ್ಲಿ ಮಾನ್ಯ ಗುರುತಿನ ಚೀಟಿ ಅಗತ್ಯವಿದೆ."
       ],
-      "audioSrc": "ayushman-bharat-yojana-kn.mp3"
+      "audioSrc": "ABPMJAY-kn.mp3"
     },
     "or": {
       "title": "ଆୟୁଷ୍ମାନ୍ ଭାରତ ଯୋଜନା",
@@ -653,7 +653,7 @@
         "ଅନ୍ୟ କୌଣସି ସରକାରୀ ବୀମା ଯୋଜନା ଅନ୍ତର୍ଗତ ନ ହେବା ଉଚିତ।",
         "ଚିକିତ୍ସା ସମୟରେ ମାନ୍ୟ ଚିହ୍ନଟ କାଗଜ ଦରକାର।"
       ],
-      "audioSrc": "ayushman-bharat-yojana-or.mp3"
+      "audioSrc": "ABPMJAY-or.mp3"
     },
     "ml": {
       "title": "അയുഷ്മാൻ ഭാരത് യോജന",
@@ -667,7 +667,7 @@
         "മറ്റു സർക്കാർ ഇൻഷുറൻസ് പദ്ധതിയിൽ ഉൾപ്പെടരുത്.",
         "ചികിത്സ സമയത്ത് തിരിച്ചറിയൽ രേഖ ആവശ്യമാണ്."
       ],
-      "audioSrc": "ayushman-bharat-yojana-ml.mp3"
+      "audioSrc": "ABPMJAY-ml.mp3"
     }
   },
   "image": "https://dashboard.swarajdigital.in/storage/app/uploads/public/66e/2c1/d70/66e2c1d700d56069825446.jpg",
